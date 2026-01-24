@@ -100,67 +100,67 @@ local function sendDecoratedChatByChannel(message, sender, channel)
     if tostring(channel) == "-3" then 
         -- Incoming Whispers CMF_WHISPER
         local formatted = prefix .. sender .. " to you: " .. message
-        X2Chat:DispatchChatMessage(3, formatted)
+        api.Log:Info(formatted)
         return 
     elseif tostring(channel) == "0" then
         -- Local CMF_SAY
         local formatted = prefix .. "[" .. sender .. "]: " .. message
-        X2Chat:DispatchChatMessage(56, "|cFFfbfbfb" .. formatted)
+        api.Log:Info("|cFFfbfbfb" .. formatted)
         return
     elseif tostring(channel) == "1" then
         -- Shout CMF_ZONE
         local formatted = prefix .. "[" .. sender .. "]: " .. message
-        X2Chat:DispatchChatMessage(56, "|cFFee6890" .. formatted)
+        api.Log:Info("|cFFee6890" .. formatted)
         return
     elseif tostring(channel) == "2" then
         -- Trade CMF_TRADE
         local formatted = prefix .. "[" .. sender .. "]: " .. message
-        X2Chat:DispatchChatMessage(56, "|cFF35edc8" .. formatted)
+        api.Log:Info("|cFF35edc8" .. formatted)
         return
     elseif tostring(channel) == "3" then
         -- Looking for Group CMF_FIND_PARTY
         local formatted = prefix .. "[" .. sender .. "]: " .. message
-        X2Chat:DispatchChatMessage(56, formatted)
+        api.Log:Info(formatted)
         return
     elseif tostring(channel) == "4" then
         -- Party CMF_PARTY
         local formatted = prefix .. "[" .. sender .. "]: " .. message
-        X2Chat:DispatchChatMessage(4, formatted)
+        api.Log:Info(formatted)
         return
     elseif tostring(channel) == "5" then
         -- Raid CMF_RAID
         local formatted = prefix .. "[" .. sender .. "]: " .. message
-        X2Chat:DispatchChatMessage(5, formatted)
+        api.Log:Info(formatted)
         return
     elseif tostring(channel) == "6" then
         -- Nation CMF_RACE 
         local formatted = prefix .. "[" .. sender .. "]: " .. message
-        X2Chat:DispatchChatMessage(56, "|cFF8eb131" .. formatted)
+        api.Log:Info("|cFF8eb131" .. formatted)
         return
     elseif tostring(channel) == "7" then
         -- Guild CMF_EXPEDITION
         local formatted = prefix .. "[" .. sender .. "]: " .. message
-        X2Chat:DispatchChatMessage(6, formatted)
+        api.Log:Info(formatted)
         return
     elseif tostring(channel) == "9" then
         -- Family CMF_FAMILY
         local formatted = prefix .. "[" .. sender .. "]: " .. message
-        X2Chat:DispatchChatMessage(57, formatted)
+        api.Log:Info(formatted)
         return
     elseif tostring(channel) == "10" then
         -- Command CMF_RAID_COMMAND
         local formatted = prefix .. "[" .. sender .. "]: " .. message
-        X2Chat:DispatchChatMessage(58, formatted)
+        api.Log:Info(formatted)
         return
     elseif tostring(channel) == "11" then
         -- Trial CMF_TRIAL
         local formatted = prefix .. "[" .. sender .. "]: " .. message
-        X2Chat:DispatchChatMessage(59, formatted)
+        api.Log:Info(formatted)
         return
     elseif tostring(channel) == "14" then
         -- Faction CMF_FACTION
         local formatted = prefix .. "[" .. sender .. "]: " .. message
-        X2Chat:DispatchChatMessage(56, "|cFFfcfc01" .. formatted)
+        api.Log:Info("|cFFfcfc01" .. formatted)
         return
     else
         return nil
