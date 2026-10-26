@@ -4,7 +4,7 @@ local base64 = require('cant_read/base64/rfc')
 local cant_read_addon = {
 	name = "Can't Read",
 	author = "Michaelqt",
-	version = "1.0",
+	version = "1.0.6",
 	desc = "Automatic chat translation to language of choice."
 }
 
